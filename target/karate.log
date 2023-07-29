@@ -28027,3 +28027,137 @@ src/test/java/users/get/user-get.feature:77
 {"error":"Missing email or username"}
 
 23:09:42.340 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/users/erros/errors.users.get.feature
+23:13:19.324 [main]  INFO  com.intuit.karate - Karate version: 1.2.0.RC4
+23:13:19.955 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1690665199953
+23:13:24.337 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:13:25.029 [main]  DEBUG com.intuit.karate - response time in milliseconds: 685
+1 < 400
+1 < Date: Sat, 29 Jul 2023 21:13:24 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 37
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"25-Ik70kof1lbc973ShN5FoVPxYn7A"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=42ZieEyHn3pICmjKtg%2BIUJ4hfjphXi%2FOntoxgKIFQHIFNs4zhbXwzUpxdYl139n%2FFDKJeGZomXHaG1OOwdrNrEU445pqSIqoAh7P2BBJcik1EMPZZRND5SB4Dw%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7ee85d9aae72669b-MAD
+{"error":"Missing email or username"}
+
+23:13:25.576 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:13:25.739 [main]  DEBUG com.intuit.karate - response time in milliseconds: 162
+1 < 400
+1 < Date: Sat, 29 Jul 2023 21:13:25 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 37
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"25-Ik70kof1lbc973ShN5FoVPxYn7A"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lOpguzD0WHVgex7iswaAnNc2Izc4SIVPycxgZQY%2Fg6WMmscI14pBa8JI9sV50%2F5XH0GFt%2By6QbEGkqlt93V%2FFGdGoPq8CU6M2Q8gb1s0sxeteUXGrtyBfWlmNg%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7ee85d9f49d82f95-MAD
+{"error":"Missing email or username"}
+
+23:13:27.305 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/users/erros/errors.users.get.feature
+23:19:06.807 [main]  INFO  com.intuit.karate - Karate version: 1.2.0.RC4
+23:19:07.437 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1690665547435
+23:19:11.489 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:19:12.019 [main]  DEBUG com.intuit.karate - response time in milliseconds: 524
+1 < 400
+1 < Date: Sat, 29 Jul 2023 21:19:12 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 37
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"25-Ik70kof1lbc973ShN5FoVPxYn7A"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jiijhIGI%2BBmUy%2FgTAbvGb2CSuSLQgmyATPzMI3opVIANddoGF7n4e50U%2BHQ4Z98%2BEoxNMqu57tlyBB%2FT2r3nVB%2BahNx3lhPNy3GDM6cnOKiDJSQz80BZT661Bw%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7ee866138d99666f-MAD
+{"error":"Missing email or username"}
+
+23:19:12.474 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:19:12.669 [main]  DEBUG com.intuit.karate - response time in milliseconds: 194
+1 < 400
+1 < Date: Sat, 29 Jul 2023 21:19:12 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 37
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"25-Ik70kof1lbc973ShN5FoVPxYn7A"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=B81VcnUWAQRaVFF18Y%2FfZG6Wjnf3BvYGLTopff7dSkZbc5V%2BHNlZWtEzRsRXntePI2REQzpvrN24mJ%2BvA8JSPB6%2FrzL0KztXb6Eox9iTYiDX04AngzRqHDLqDA%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7ee8661799d614f1-MAD
+{"error":"Missing email or username"}
+
+23:19:14.259 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/users/errors/errors.users.get.feature
+23:19:23.342 [main]  INFO  com.intuit.karate - Karate version: 1.2.0.RC4
+23:19:23.979 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1690665563972
+23:19:28.053 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/register
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:19:28.813 [main]  DEBUG com.intuit.karate - response time in milliseconds: 751
+1 < 400
+1 < Date: Sat, 29 Jul 2023 21:19:28 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 37
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"25-Ik70kof1lbc973ShN5FoVPxYn7A"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QTybzntHYlMbfZAARqIxNoU8qJY23%2FYUUBnHTk5dELoj%2BdpaVZ6nDTsM7QeuTSnLudeVblJbsJscP%2FiFC%2BfnuJJv8OpMVV%2Bs4EVTQ2AkpKXm%2BZj5q4PrDqxJ3Q%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7ee8667b0cb9666c-MAD
+{"error":"Missing email or username"}
+
+23:19:30.318 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/users/errors/errors.users.post.feature
