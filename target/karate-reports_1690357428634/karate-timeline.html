@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/get\/user-get[1:3]","start":1690357416072,"end":1690357417652,"title":"src\/test\/java\/users\/get\/user-get[1:3] 09:43:36.072-09:43:37.652 Get a user"},{"id":2,"group":1,"content":"src\/test\/java\/users\/get\/user-get[2:8]","start":1690357417666,"end":1690357417764,"title":"src\/test\/java\/users\/get\/user-get[2:8] 09:43:37.666-09:43:37.764 Get a user"},{"id":3,"group":1,"content":"src\/test\/java\/users\/get\/user-get[3:13]","start":1690357417775,"end":1690357417967,"title":"src\/test\/java\/users\/get\/user-get[3:13] 09:43:37.775-09:43:37.967 Get a user"},{"id":4,"group":1,"content":"src\/test\/java\/users\/get\/user-get[4:18]","start":1690357417973,"end":1690357418247,"title":"src\/test\/java\/users\/get\/user-get[4:18] 09:43:37.973-09:43:38.247 Get a list of user"},{"id":5,"group":1,"content":"src\/test\/java\/users\/get\/user-get[5:25]","start":1690357418255,"end":1690357418548,"title":"src\/test\/java\/users\/get\/user-get[5:25] 09:43:38.255-09:43:38.548 Get a list of user with file","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/users\/get\/user-get[6:35]","start":1690357418559,"end":1690357418563,"title":"src\/test\/java\/users\/get\/user-get[6:35] 09:43:38.559-09:43:38.563 Get a list of user with file other data","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/users\/get\/user-get[7:44]","start":1690357418572,"end":1690357418575,"title":"src\/test\/java\/users\/get\/user-get[7:44] 09:43:38.572-09:43:38.575 Get a list of user with file not found","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

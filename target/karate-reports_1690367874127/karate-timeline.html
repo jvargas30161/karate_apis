@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/put\/users-put[1:3]","start":1690367833930,"end":1690367834769,"title":"src\/test\/java\/users\/put\/users-put[1:3] 12:37:13.930-12:37:14.769 Put a user 1"},{"id":2,"group":1,"content":"src\/test\/java\/users\/put\/users-put[2:8]","start":1690367834774,"end":1690367834922,"title":"src\/test\/java\/users\/put\/users-put[2:8] 12:37:14.774-12:37:14.922 Put a user 2"},{"id":3,"group":1,"content":"src\/test\/java\/users\/put\/users-put[3:13]","start":1690367834926,"end":1690367835074,"title":"src\/test\/java\/users\/put\/users-put[3:13] 12:37:14.926-12:37:15.074 Put a user 3"},{"id":4,"group":1,"content":"src\/test\/java\/users\/put\/users-put[4:18]","start":1690367835078,"end":1690367835231,"title":"src\/test\/java\/users\/put\/users-put[4:18] 12:37:15.078-12:37:15.231 Put a user 4"},{"id":5,"group":1,"content":"src\/test\/java\/users\/put\/users-put[5:23]","start":1690367835234,"end":1690367835355,"title":"src\/test\/java\/users\/put\/users-put[5:23] 12:37:15.234-12:37:15.355 Put a user 5"},{"id":6,"group":1,"content":"src\/test\/java\/users\/put\/users-put[6:28]","start":1690367835358,"end":1690367835664,"title":"src\/test\/java\/users\/put\/users-put[6:28] 12:37:15.358-12:37:15.664 Post with read response from file"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

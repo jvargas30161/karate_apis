@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/post\/user-post[1:8]","start":1690578603814,"end":1690578604710,"title":"src\/test\/java\/users\/post\/user-post[1:8] 23:10:03.814-23:10:04.710 Post a user 1"},{"id":2,"group":1,"content":"src\/test\/java\/users\/post\/user-post[2:13]","start":1690578604716,"end":1690578604864,"title":"src\/test\/java\/users\/post\/user-post[2:13] 23:10:04.716-23:10:04.864 Post a user 2"},{"id":3,"group":1,"content":"src\/test\/java\/users\/post\/user-post[3:18]","start":1690578604868,"end":1690578605000,"title":"src\/test\/java\/users\/post\/user-post[3:18] 23:10:04.868-23:10:05.000 Post a user 3"},{"id":4,"group":1,"content":"src\/test\/java\/users\/post\/user-post[4:23]","start":1690578605005,"end":1690578605172,"title":"src\/test\/java\/users\/post\/user-post[4:23] 23:10:05.005-23:10:05.172 Post a user"},{"id":5,"group":1,"content":"src\/test\/java\/users\/post\/user-post[5:29]","start":1690578605176,"end":1690578605516,"title":"src\/test\/java\/users\/post\/user-post[5:29] 23:10:05.176-23:10:05.516 Post with read response from file"},{"id":6,"group":1,"content":"src\/test\/java\/users\/post\/user-post[6:46]","start":1690578605520,"end":1690578605671,"title":"src\/test\/java\/users\/post\/user-post[6:46] 23:10:05.520-23:10:05.671 Post a user"},{"id":7,"group":1,"content":"src\/test\/java\/users\/post\/user-post[7:52]","start":1690578605675,"end":1690578605807,"title":"src\/test\/java\/users\/post\/user-post[7:52] 23:10:05.675-23:10:05.807 Post a user"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/delete\/user-delete[1:3]","start":1690578528214,"end":1690578529066,"title":"src\/test\/java\/users\/delete\/user-delete[1:3] 23:08:48.214-23:08:49.066 Delete a user"},{"id":2,"group":1,"content":"src\/test\/java\/users\/delete\/user-delete[2:8]","start":1690578529072,"end":1690578529217,"title":"src\/test\/java\/users\/delete\/user-delete[2:8] 23:08:49.072-23:08:49.217 Delete a user"},{"id":3,"group":1,"content":"src\/test\/java\/users\/delete\/user-delete[3:13]","start":1690578529221,"end":1690578529396,"title":"src\/test\/java\/users\/delete\/user-delete[3:13] 23:08:49.221-23:08:49.396 Delete a user"},{"id":4,"group":1,"content":"src\/test\/java\/users\/delete\/user-delete[4:18]","start":1690578529400,"end":1690578529533,"title":"src\/test\/java\/users\/delete\/user-delete[4:18] 23:08:49.400-23:08:49.533 Delete a user"},{"id":5,"group":1,"content":"src\/test\/java\/users\/delete\/user-delete[5:23]","start":1690578529537,"end":1690578529712,"title":"src\/test\/java\/users\/delete\/user-delete[5:23] 23:08:49.537-23:08:49.712 Delete a user"},{"id":6,"group":1,"content":"src\/test\/java\/users\/delete\/user-delete[6:28]","start":1690578529715,"end":1690578529858,"title":"src\/test\/java\/users\/delete\/user-delete[6:28] 23:08:49.715-23:08:49.858 Delete a user"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

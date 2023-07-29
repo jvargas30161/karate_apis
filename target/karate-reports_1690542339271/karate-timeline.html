@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/patch\/user-patch[1:3]","start":1690542320891,"end":1690542321750,"title":"src\/test\/java\/users\/patch\/user-patch[1:3] 13:05:20.891-13:05:21.750 Patch a user 1"},{"id":2,"group":1,"content":"src\/test\/java\/users\/patch\/user-patch[2:8]","start":1690542321754,"end":1690542321948,"title":"src\/test\/java\/users\/patch\/user-patch[2:8] 13:05:21.754-13:05:21.948 Patch a user 2"},{"id":3,"group":1,"content":"src\/test\/java\/users\/patch\/user-patch[3:13]","start":1690542321952,"end":1690542322104,"title":"src\/test\/java\/users\/patch\/user-patch[3:13] 13:05:21.952-13:05:22.104 Patch a user 3"},{"id":4,"group":1,"content":"src\/test\/java\/users\/patch\/user-patch[4:18]","start":1690542322108,"end":1690542322253,"title":"src\/test\/java\/users\/patch\/user-patch[4:18] 13:05:22.108-13:05:22.253 Patch a user 4"},{"id":5,"group":1,"content":"src\/test\/java\/users\/patch\/user-patch[5:23]","start":1690542322256,"end":1690542322385,"title":"src\/test\/java\/users\/patch\/user-patch[5:23] 13:05:22.256-13:05:22.385 Patch a user 5"},{"id":6,"group":1,"content":"src\/test\/java\/users\/patch\/user-patch[6:28]","start":1690542322388,"end":1690542322478,"title":"src\/test\/java\/users\/patch\/user-patch[6:28] 13:05:22.388-13:05:22.478 Get a list of user and match"},{"id":7,"group":1,"content":"src\/test\/java\/users\/patch\/user-patch[7:34]","start":1690542322480,"end":1690542322754,"title":"src\/test\/java\/users\/patch\/user-patch[7:34] 13:05:22.480-13:05:22.754 Get a list of user with file"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

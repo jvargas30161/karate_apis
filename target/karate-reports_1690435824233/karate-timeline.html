@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/put\/users-put[1:3]","start":1690435809069,"end":1690435809840,"title":"src\/test\/java\/users\/put\/users-put[1:3] 07:30:09.069-07:30:09.840 Put a user 1"},{"id":2,"group":1,"content":"src\/test\/java\/users\/put\/users-put[2:8]","start":1690435809841,"end":1690435809971,"title":"src\/test\/java\/users\/put\/users-put[2:8] 07:30:09.841-07:30:09.971 Put a user 2"},{"id":3,"group":1,"content":"src\/test\/java\/users\/put\/users-put[3:13]","start":1690435809988,"end":1690435810125,"title":"src\/test\/java\/users\/put\/users-put[3:13] 07:30:09.988-07:30:10.125 Put a user 3"},{"id":4,"group":1,"content":"src\/test\/java\/users\/put\/users-put[4:18]","start":1690435810126,"end":1690435810272,"title":"src\/test\/java\/users\/put\/users-put[4:18] 07:30:10.126-07:30:10.272 Put a user 4"},{"id":5,"group":1,"content":"src\/test\/java\/users\/put\/users-put[5:23]","start":1690435810273,"end":1690435810440,"title":"src\/test\/java\/users\/put\/users-put[5:23] 07:30:10.273-07:30:10.440 Put a user 5"},{"id":6,"group":1,"content":"src\/test\/java\/users\/put\/users-put[6:28]","start":1690435810441,"end":1690435810725,"title":"src\/test\/java\/users\/put\/users-put[6:28] 07:30:10.441-07:30:10.725 Post with read response from file","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

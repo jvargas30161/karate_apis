@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/get\/user-get[1:3]","start":1690542360604,"end":1690542361436,"title":"src\/test\/java\/users\/get\/user-get[1:3] 13:06:00.604-13:06:01.436 Get a user"},{"id":2,"group":1,"content":"src\/test\/java\/users\/get\/user-get[2:8]","start":1690542361441,"end":1690542361508,"title":"src\/test\/java\/users\/get\/user-get[2:8] 13:06:01.441-13:06:01.508 Get a user"},{"id":3,"group":1,"content":"src\/test\/java\/users\/get\/user-get[3:13]","start":1690542361513,"end":1690542361657,"title":"src\/test\/java\/users\/get\/user-get[3:13] 13:06:01.513-13:06:01.657 Get a user"},{"id":4,"group":1,"content":"src\/test\/java\/users\/get\/user-get[4:18]","start":1690542361661,"end":1690542361781,"title":"src\/test\/java\/users\/get\/user-get[4:18] 13:06:01.661-13:06:01.781 Get a list of user"},{"id":5,"group":1,"content":"src\/test\/java\/users\/get\/user-get[5:25]","start":1690542361784,"end":1690542361987,"title":"src\/test\/java\/users\/get\/user-get[5:25] 13:06:01.784-13:06:01.987 Get a list of user with file"},{"id":6,"group":1,"content":"src\/test\/java\/users\/get\/user-get[6:35]","start":1690542361990,"end":1690542362044,"title":"src\/test\/java\/users\/get\/user-get[6:35] 13:06:01.990-13:06:02.044 Get a list of user with file other data"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

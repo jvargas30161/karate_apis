@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/users\/get\/user-get[1:3]","start":1690436789285,"end":1690436790049,"title":"src\/test\/java\/users\/get\/user-get[1:3] 07:46:29.285-07:46:30.049 Get a user"},{"id":2,"group":1,"content":"src\/test\/java\/users\/get\/user-get[2:8]","start":1690436790050,"end":1690436790118,"title":"src\/test\/java\/users\/get\/user-get[2:8] 07:46:30.050-07:46:30.118 Get a user"},{"id":3,"group":1,"content":"src\/test\/java\/users\/get\/user-get[3:13]","start":1690436790134,"end":1690436790265,"title":"src\/test\/java\/users\/get\/user-get[3:13] 07:46:30.134-07:46:30.265 Get a user"},{"id":4,"group":1,"content":"src\/test\/java\/users\/get\/user-get[4:18]","start":1690436790281,"end":1690436790367,"title":"src\/test\/java\/users\/get\/user-get[4:18] 07:46:30.281-07:46:30.367 Get a list of user"},{"id":5,"group":1,"content":"src\/test\/java\/users\/get\/user-get[5:25]","start":1690436790368,"end":1690436790603,"title":"src\/test\/java\/users\/get\/user-get[5:25] 07:46:30.368-07:46:30.603 Get a list of user with file"},{"id":6,"group":1,"content":"src\/test\/java\/users\/get\/user-get[6:35]","start":1690436790604,"end":1690436790666,"title":"src\/test\/java\/users\/get\/user-get[6:35] 07:46:30.604-07:46:30.666 Get a list of user with file other data"},{"id":7,"group":1,"content":"src\/test\/java\/users\/get\/user-get[7:44]","start":1690436790667,"end":1690436790819,"title":"src\/test\/java\/users\/get\/user-get[7:44] 07:46:30.667-07:46:30.819 Get a list of user with file not found"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
