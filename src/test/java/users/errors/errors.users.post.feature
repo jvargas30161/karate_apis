@@ -7,5 +7,3 @@ Feature: Post errors user regres
     Then status 400
     And match $ == {"error": "Missing password","error": "Missing email or username"}
     And match $ == jsonResponse
-
-    ## Nuevos cambios
